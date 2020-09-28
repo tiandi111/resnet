@@ -71,7 +71,7 @@ class ResNet(object):
 		"""Perform batch normalization then relu."""
 
 		### YOUR CODE HERE
-		outputs = tf.layers.batch_normalization(inputs, training=training)
+		outputs = tf.layers.batch_normalization(inputs, training=True)
 		outputs = tf.nn.relu(outputs)
 
 		### END CODE HERE
@@ -198,7 +198,7 @@ class ResNet(object):
 		outputs = tf.layers.conv2d(inputs, filters, (3, 3),  padding='same', strides=(strides, strides))
 		outputs = self._batch_norm_relu(outputs, training=training)
 		outputs = tf.layers.conv2d(outputs, filters, (3, 3), padding='same', strides=(1, 1))
-		outputs = tf.layers.batch_normalization(outputs, training=training)
+		outputs = tf.layers.batch_normalization(outputs, training=True)
 		outputs = tf.nn.relu(outputs + shortcut)
 		### END CODE HERE
 

@@ -93,7 +93,7 @@ class Cifar(object):
             ### YOUR CODE HERE
             # Set the learning rate for this epoch
             # Usage example: divide the initial learning rate by 10 after several epochs
-            learning_rate = 0.1 ** (epoch/20+1)
+            learning_rate = 0.001 ** (epoch/20+1)
             accs = []
             ### END CODE HERE
 
